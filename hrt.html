@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="bg.css">
     <link rel="stylesheet" href="slideshow.css">
 
+    <style>
+        button {
+            all: unset;
+        }
+
+        button:focus {
+            outline: revert;
+        }
+    </style>
+
 </head>
 
 <div class="bg"></div>
@@ -43,6 +53,19 @@
             that these hormones bring about.
         </p>
 
+    </div>
+
+    <div class="white-box" style="margin: auto; width: fit-content;">
+        <h2 style="margin: 0px;">Jump To</h2>
+        <button class="white-box scroll-button" data-target="HRTNHS"
+            style="color: inherit; text-decoration: inherit; padding-bottom: 20px; margin-bottom: 0px;">Accessing HRT Through The
+            NHS</button>
+
+        <button class="white-box scroll-button" data-target="HRTPRIVATE"
+            style="color: inherit; text-decoration: inherit; padding-bottom: 20px; margin-bottom: 0px;">Accessing HRT Through A Private
+            GP</button>
+        <br>
+        <br>
     </div>
 
     <div class="white-box">
@@ -97,7 +120,7 @@
     </div>
 
 
-    <div class="white-box">
+    <div class="white-box" id="HRTNHS">
 
         <h1 style="margin-bottom: 0px;">Accessing HRT through the NHS</h1>
         <p style="margin-top: 0px; font-weight: bold;"> This guide can be followed for both MTF and FTM people.</p>
@@ -123,7 +146,8 @@
             appointments (e.g. an interpreter, advocate or carer). What medications do you currently take?
             <br>
             <br>
-            They could also ask some questions about your gender identity, this may include When did you start feeling
+            They could also ask some more specific questions about your gender identity, this may include When did you
+            start feeling
             something was wrong related to your gender? Did you experiment with gender during childhood (clothes, hair,
             makeup, etc)? Have you made a name change? If not, do you have a preferred name? Have you updated your NHS
             records? Have you made any public changes to your gender presentation?
@@ -156,11 +180,11 @@
         </p>
     </div>
 
-    <div class="white-box">
+    <div class="white-box" id="HRTPRIVATE">
 
-        <h1 style="margin-bottom: 0px;">Accessing HRT through the a Private GP</h1>
+        <h1 style="margin-bottom: 0px;">Accessing HRT through a Private GP</h1>
         <p style="margin-top: 0px; font-weight: bold;">
-            In this case we will discuss the private gp GenderGP
+            In this case we will discuss the private GP GenderGP
             <br>
             This guide can be followed for both MTF and FTM people.
         </p>
@@ -206,7 +230,8 @@
         <p style="text-align: left; padding-left: 20px; margin-top: 0px;">
             Each prescription has its own price depending on the medication being prescribed. A full list of prices of
             prescriptions can be found on the GenderGP website <a
-                href="https://www.gendergp.com/help-centre/gendergp-service-costs/">here</a>. Along with all the costs that come with GenderGP, including bloodtests and consultations.
+                href="https://www.gendergp.com/help-centre/gendergp-service-costs/">here</a>. Along with all the costs
+            that come with GenderGP, including bloodtests and consultations.
         </p>
 
 
@@ -214,5 +239,20 @@
 
 
 </body>
+
+<script>
+    // JavaScript for scrolling
+    const scrollButtons = document.querySelectorAll('.scroll-button');
+
+    scrollButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+</script>
 
 </html>
