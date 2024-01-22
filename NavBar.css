@@ -70,6 +70,6 @@
     
     .dropdown-content a:hover {background-color: #ddd;}
     
-    .dropdown:hover .dropdown-content {display: block;}
+    .dropdown:hover .dropdown:active .dropdown-content {display: block;}
     
-    .dropdown:hover .dropbtn {background-color: #ccc;}
+    .dropdown:hover .dropdown:active .dropbtn {background-color: #ccc;}
