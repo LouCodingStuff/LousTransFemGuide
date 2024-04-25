@@ -1,4 +1,6 @@
-    .nav-wrapper {
+/* This file of code looks after almost all of the styling of the navigation bar, I chose to put it in a seperate file to the rest of the CSS as there is alot of things that are stlyised with the navigation bar. */
+
+.nav-wrapper {
       padding-top: 58px;
     }
 
@@ -33,11 +35,6 @@
       color: #000;
       background-color: #ccc;
     }
-
-
-
-
-
 
     .dropbtn {
       padding: 5px 10px;

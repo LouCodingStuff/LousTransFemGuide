@@ -3,7 +3,7 @@ $(document).ready(function() {
       var imageUrl = $(this).attr("src");
       var modalContent = '<img src="' + imageUrl + '" alt="Enlarged Photo">';
   
-      // Create a modal or lightbox element
+      // Create a modal element
       var modal = $('<div id="photo-modal">' + modalContent + '</div>');
   
       // Add the modal to the page
